@@ -4,12 +4,14 @@
      original do logo entrar em images/logo/ (Etapa 2). */
   --color-accent: #d98a1f;
   --color-accent-dark: #b36f15;
-  --color-ink: #33312e;
-  --color-ink-soft: #55504a;
-  --color-bg: #faf7f2;
-  --color-surface: #ffffff;
-  --color-border: #e4ded4;
-  --color-text-muted: #7a746c;
+  --color-ink: #211f1c;
+  --color-ink-soft: #4a453f;
+  --color-bg: #f2ece1;
+  --color-surface: #fffdf9;
+  --color-border: #ddd4c4;
+  --color-text-muted: #706a5f;
+  --color-dark-surface: #1a1815;
+  --color-dark-border: #38342e;
 
   /* Tipografia */
   --font-heading: "Fraunces", serif;
