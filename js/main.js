@@ -1,1 +1,3 @@
-console.log("Casa Betel — projeto inicializado.");
+import { initMenu } from "./modules/menu.js";
+
+initMenu();

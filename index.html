@@ -23,14 +23,46 @@
     <link rel="stylesheet" href="css/sections.css" />
   </head>
   <body>
-    <main class="dev-check">
-      <p>Estrutura inicial do projeto configurada corretamente.</p>
+    <header class="site-header" data-header>
+      <div class="container site-header__inner">
+        <a href="#inicio" class="logo" aria-label="Elevare — página inicial">Elevare</a>
+
+        <nav id="primary-navigation" class="nav" data-nav aria-label="Navegação principal">
+          <ul class="nav__list">
+            <li><a href="#inicio" class="nav__link">Início</a></li>
+            <li><a href="#a-casa" class="nav__link">A Casa</a></li>
+            <li><a href="#ambientes" class="nav__link">Ambientes</a></li>
+            <li><a href="#galeria" class="nav__link">Galeria</a></li>
+            <li><a href="#ficha-tecnica" class="nav__link">Ficha Técnica</a></li>
+            <li><a href="#contato" class="nav__link">Contato</a></li>
+          </ul>
+        </nav>
+
+        <a href="#contato" class="btn btn--accent site-header__cta">Falar no WhatsApp</a>
+
+        <button
+          type="button"
+          class="nav-toggle"
+          data-nav-toggle
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="sr-only">Abrir menu</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="dev-check" id="inicio">
+      <p>Header e navegação configurados corretamente.</p>
       <p>
         Título em <strong style="font-family: var(--font-heading)">Fraunces</strong> · Texto em
         <strong style="font-family: var(--font-body)">Inter</strong>
       </p>
     </main>
 
-    <script src="js/main.js" defer></script>
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>

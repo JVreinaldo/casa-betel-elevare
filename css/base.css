@@ -1,8 +1,17 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+
 body {
   background-color: var(--color-bg);
   color: var(--color-ink);
   font-family: var(--font-body);
   font-size: 1rem;
+}
+
+body.no-scroll {
+  overflow: hidden;
 }
 
 h1,
@@ -20,7 +29,7 @@ h4 {
   padding-inline: var(--space-md);
 }
 
-/* Bloco temporário de verificação — será removido na Etapa 2 */
+/* Bloco temporário de verificação — será substituído pelo Hero na Etapa 3 */
 .dev-check {
   min-height: 100svh;
   display: flex;
