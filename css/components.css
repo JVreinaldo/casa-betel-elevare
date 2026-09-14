@@ -17,59 +17,161 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 1.5rem;
-  font-size: 0.875rem;
+  gap: 0.5rem;
+  padding: 0.9rem 1.85rem;
+  font-size: 0.85rem;
   font-weight: 500;
-  letter-spacing: 0.02em;
-  transition: background-color var(--transition-base), color var(--transition-base);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 1px;
+  transition: background-color var(--transition-smooth), color var(--transition-smooth),
+    border-color var(--transition-smooth), box-shadow var(--transition-smooth),
+    transform var(--transition-smooth);
+}
+
+.btn:active {
+  transform: translateY(0) scale(0.98);
 }
 
 .btn--accent {
   background-color: var(--color-accent);
   color: var(--color-surface);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn--accent:hover {
   background-color: var(--color-accent-dark);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
 }
 
 .btn--outline {
-  border: 1px solid var(--color-surface);
+  border: 1px solid rgba(250, 247, 242, 0.6);
   color: var(--color-surface);
+  backdrop-filter: blur(2px);
 }
 
 .btn--outline:hover {
   background-color: var(--color-surface);
+  border-color: var(--color-surface);
   color: var(--color-ink);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
-/* Cards */
-.ambiente-card img,
+.btn--dark {
+  background-color: var(--color-ink);
+  color: var(--color-bg);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--dark:hover {
+  background-color: #000;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn--whatsapp {
+  background-color: var(--color-whatsapp);
+  color: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--whatsapp:hover {
+  background-color: var(--color-whatsapp-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn__icon {
+  width: 1.1em;
+  height: 1.1em;
+  flex-shrink: 0;
+}
+
+/* Botão flutuante do WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  inset-block-end: var(--space-md);
+  inset-inline-end: var(--space-md);
+  z-index: 150;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--color-whatsapp);
+  color: var(--color-surface);
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth),
+    background-color var(--transition-smooth);
+}
+
+.whatsapp-float:hover {
+  background-color: var(--color-whatsapp-dark);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: var(--shadow-lg);
+}
+
+.whatsapp-float svg {
+  width: 28px;
+  height: 28px;
+}
+
+/* Cards de ambiente — imagem em primeiro plano, legenda mínima sobre a foto */
+.ambiente-card__media {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  border-radius: 2px;
+}
+
+.ambiente-card--wide .ambiente-card__media {
+  aspect-ratio: 16 / 10;
+}
+
+.ambiente-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.ambiente-card:hover .ambiente-card__media img {
+  transform: scale(1.06);
+}
+
+.ambiente-card__caption {
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-end: 0;
+  inset-inline-end: 0;
+  padding: var(--space-md);
+  padding-block-start: var(--space-2xl);
+  background: linear-gradient(to top, rgba(15, 13, 11, 0.75), transparent);
+  color: var(--color-surface);
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+}
+
 .diferencial-card {
   border-radius: 2px;
 }
 
-.ambiente-card img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  margin-block-end: var(--space-sm);
-}
-
-.ambiente-card h3 {
-  font-size: 1.1rem;
-  margin-block-end: 0.35rem;
-}
-
-.ambiente-card p {
-  color: var(--color-text-muted);
-  font-size: 0.9rem;
-}
-
 .diferencial-card {
-  padding: var(--space-md);
-  background-color: var(--color-bg);
+  padding: var(--space-lg);
+  background-color: var(--color-surface);
   border: 1px solid var(--color-border);
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth),
+    border-color var(--transition-smooth);
+}
+
+.diferencial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: transparent;
 }
 
 .diferencial-card h3 {
@@ -89,11 +191,14 @@
 
 /* Filtros da galeria */
 .galeria__filtro {
-  padding: 0.5rem 1rem;
-  font-size: 0.85rem;
+  padding: 0.55rem 1.15rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
   border: 1px solid var(--color-border);
+  border-radius: 999px;
   color: var(--color-ink-soft);
-  transition: background-color var(--transition-base), color var(--transition-base);
+  transition: background-color var(--transition-smooth), color var(--transition-smooth),
+    border-color var(--transition-smooth);
 }
 
 .galeria__filtro.is-active,
@@ -153,11 +258,15 @@
   inset-inline: 0;
   z-index: 100;
   background-color: transparent;
-  transition: background-color var(--transition-base), box-shadow var(--transition-base);
+  color: var(--color-surface);
+  transition: background-color var(--transition-base), box-shadow var(--transition-base),
+    color var(--transition-base);
 }
 
 .site-header--scrolled {
-  background-color: var(--color-bg);
+  background-color: rgba(250, 247, 242, 0.92);
+  backdrop-filter: blur(8px);
+  color: var(--color-ink);
   box-shadow: 0 1px 0 var(--color-border);
 }
 
@@ -166,6 +275,11 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--space-md);
+  padding-block: var(--space-md);
+  transition: padding-block var(--transition-base);
+}
+
+.site-header--scrolled .site-header__inner {
   padding-block: var(--space-sm);
 }
 
@@ -174,7 +288,7 @@
   font-size: 1.25rem;
   font-weight: 600;
   letter-spacing: 0.02em;
-  color: var(--color-ink);
+  color: inherit;
 }
 
 /* Navegação */
@@ -188,7 +302,7 @@
   position: relative;
   padding-block: 0.25rem;
   font-size: 0.9rem;
-  color: var(--color-ink);
+  color: inherit;
 }
 
 .nav__link::after {
@@ -197,7 +311,7 @@
   inset-inline: 0;
   inset-block-end: 0;
   block-size: 1px;
-  background-color: var(--color-accent);
+  background-color: currentColor;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform var(--transition-base);
@@ -220,7 +334,7 @@
 .nav-toggle__bar {
   width: 22px;
   height: 2px;
-  background-color: var(--color-ink);
+  background-color: currentColor;
   transition: transform var(--transition-base), opacity var(--transition-base);
 }
 
@@ -250,6 +364,7 @@
     align-items: center;
     justify-content: center;
     background-color: var(--color-bg);
+    color: var(--color-ink);
     transform: translateY(-100%);
     transition: transform var(--transition-base);
   }

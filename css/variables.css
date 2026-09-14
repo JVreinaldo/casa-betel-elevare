@@ -29,4 +29,14 @@
 
   /* Transições */
   --transition-base: 0.25s ease;
+  --transition-smooth: 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Sombras — discretas, para dar profundidade sem pesar */
+  --shadow-sm: 0 2px 8px rgba(20, 18, 16, 0.08);
+  --shadow-md: 0 12px 32px rgba(20, 18, 16, 0.14);
+  --shadow-lg: 0 24px 48px rgba(20, 18, 16, 0.18);
+
+  /* WhatsApp */
+  --color-whatsapp: #25d366;
+  --color-whatsapp-dark: #1da851;
 }
