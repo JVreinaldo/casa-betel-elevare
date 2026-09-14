@@ -1,0 +1,32 @@
+:root {
+  /* Cores — extraídas da identidade da Elevare e dos acabamentos reais da casa.
+     O laranja e o chumbo serão ajustados com precisão quando o arquivo
+     original do logo entrar em images/logo/ (Etapa 2). */
+  --color-accent: #d98a1f;
+  --color-accent-dark: #b36f15;
+  --color-ink: #33312e;
+  --color-ink-soft: #55504a;
+  --color-bg: #faf7f2;
+  --color-surface: #ffffff;
+  --color-border: #e4ded4;
+  --color-text-muted: #7a746c;
+
+  /* Tipografia */
+  --font-heading: "Fraunces", serif;
+  --font-body: "Inter", sans-serif;
+
+  /* Espaçamento — escala usada em toda a página */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --space-3xl: 8rem;
+
+  /* Largura máxima de conteúdo */
+  --content-width: 1200px;
+
+  /* Transições */
+  --transition-base: 0.25s ease;
+}
