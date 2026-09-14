@@ -16,7 +16,7 @@ function initFilters() {
       filtros.forEach((b) => b.classList.toggle("is-active", b === botao));
 
       itens.forEach((item) => {
-        const mostrar = categoria === "todos" || item.dataset.categoria === categoria;
+        const mostrar = item.dataset.categoria === categoria;
         item.hidden = !mostrar;
       });
     });
