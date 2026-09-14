@@ -352,10 +352,6 @@
 
 /* Menu mobile em tela cheia */
 @media (max-width: 860px) {
-  .site-header__cta {
-    display: none;
-  }
-
   .nav {
     position: fixed;
     inset: 0;
