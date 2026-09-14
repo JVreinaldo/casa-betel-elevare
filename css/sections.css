@@ -1,1 +1,271 @@
 /* Estilos específicos de cada seção (hero, galeria, ficha técnica...) — preenchido a partir da Etapa 3 */
+
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.hero__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(20, 18, 16, 0.78), rgba(20, 18, 16, 0.15) 55%);
+}
+
+.hero__content {
+  position: relative;
+  color: var(--color-surface);
+  padding-block-end: var(--space-3xl);
+}
+
+.hero__eyebrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin-block-end: var(--space-xs);
+}
+
+.hero__title {
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  font-family: var(--font-heading);
+  margin-block-end: var(--space-sm);
+}
+
+.hero__tagline {
+  font-style: italic;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  max-width: 32ch;
+  margin-block-end: var(--space-lg);
+  opacity: 0.9;
+}
+
+/* Apresentação */
+.apresentacao {
+  padding-block: var(--space-3xl);
+}
+
+.apresentacao__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.apresentacao__text p {
+  color: var(--color-ink-soft);
+  margin-block-end: var(--space-md);
+  max-width: 60ch;
+}
+
+.apresentacao__image img {
+  width: 100%;
+  border-radius: 2px;
+}
+
+@media (min-width: 860px) {
+  .apresentacao__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Ambientes */
+.ambientes {
+  padding-block: var(--space-3xl);
+  background-color: var(--color-surface);
+}
+
+.ambientes__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 640px) {
+  .ambientes__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .ambientes__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Galeria */
+.galeria {
+  padding-block: var(--space-3xl);
+}
+
+.galeria__filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-block-end: var(--space-lg);
+}
+
+.galeria__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-sm);
+}
+
+@media (min-width: 640px) {
+  .galeria__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .galeria__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.galeria__item {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.galeria__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+}
+
+.galeria__item:hover img {
+  transform: scale(1.04);
+}
+
+.galeria__item[hidden] {
+  display: none;
+}
+
+/* Ficha técnica */
+.ficha-tecnica {
+  padding-block: var(--space-3xl);
+  background-color: var(--color-surface);
+}
+
+.ficha-tecnica__lista {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  max-width: 760px;
+}
+
+.ficha-tecnica__item {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding-block: var(--space-sm);
+  border-block-end: 1px solid var(--color-border);
+}
+
+.ficha-tecnica__item dt {
+  color: var(--color-text-muted);
+}
+
+.ficha-tecnica__item dd {
+  text-align: right;
+  font-weight: 500;
+}
+
+.ficha-tecnica__pendente {
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+
+/* Diferenciais */
+.diferenciais {
+  padding-block: var(--space-3xl);
+}
+
+.diferenciais__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 640px) {
+  .diferenciais__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .diferenciais__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Construtora */
+.construtora {
+  padding-block: var(--space-3xl);
+  background-color: var(--color-ink);
+  color: var(--color-bg);
+}
+
+.construtora h2 {
+  color: var(--color-bg);
+}
+
+.construtora__text {
+  max-width: 60ch;
+}
+
+.construtora__text p {
+  opacity: 0.85;
+}
+
+/* Contato */
+.contato {
+  padding-block: var(--space-3xl);
+}
+
+.contato__aviso {
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* Footer */
+.site-footer {
+  padding-block: var(--space-lg);
+  border-block-start: 1px solid var(--color-border);
+}
+
+.site-footer__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  align-items: center;
+  text-align: center;
+}
+
+.site-footer p {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+@media (min-width: 640px) {
+  .site-footer__inner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

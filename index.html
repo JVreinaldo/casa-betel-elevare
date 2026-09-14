@@ -9,6 +9,15 @@
       content="Casa Betel — projeto residencial de alto padrão assinado pela Elevare."
     />
 
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Casa Betel | Elevare" />
+    <meta
+      property="og:description"
+      content="Casa Betel — projeto residencial de alto padrão assinado pela Elevare."
+    />
+    <meta property="og:image" content="images/fachada/fachada-noite.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -55,13 +64,315 @@
       </div>
     </header>
 
-    <main class="dev-check" id="inicio">
-      <p>Header e navegação configurados corretamente.</p>
-      <p>
-        Título em <strong style="font-family: var(--font-heading)">Fraunces</strong> · Texto em
-        <strong style="font-family: var(--font-body)">Inter</strong>
-      </p>
+    <main>
+      <section class="hero" id="inicio">
+        <img
+          class="hero__image"
+          src="images/fachada/fachada-noite.jpg"
+          alt="Fachada noturna da Casa Betel, com iluminação embutida no ripado de madeira e na escadaria de acesso"
+          width="1333"
+          height="750"
+        />
+        <div class="hero__overlay"></div>
+        <div class="hero__content container">
+          <p class="hero__eyebrow reveal">Elevare</p>
+          <h1 class="hero__title reveal">Casa Betel</h1>
+          <p class="hero__tagline reveal">
+            "Onde sonhos ganham forma e propósitos se tornam lar"
+          </p>
+          <a href="#a-casa" class="btn btn--outline hero__cta reveal">Conhecer o projeto</a>
+        </div>
+      </section>
+
+      <section class="apresentacao" id="a-casa">
+        <div class="container apresentacao__grid">
+          <div class="apresentacao__text reveal">
+            <p class="section-eyebrow">A Casa</p>
+            <h2>Arquitetura que acompanha o terreno</h2>
+            <p>
+              A Casa Betel ocupa um terreno em aclive, resolvido por meio de platôs e
+              escadarias que acompanham o desnível natural do lote. A fachada combina
+              reboco branco, pedra portuguesa e ripas de madeira, com esquadrias amplas
+              que abrem os ambientes internos para o jardim e a piscina.
+            </p>
+            <p>
+              Internamente, o pé-direito duplo da sala de estar e a integração entre
+              cozinha, jantar e área gourmet reforçam a ideia de uma casa pensada para
+              dissolver a fronteira entre os ambientes internos e externos.
+            </p>
+          </div>
+          <div class="apresentacao__image reveal">
+            <img
+              src="images/fachada/fachada-dia.jpg"
+              alt="Fachada diurna da Casa Betel, vista frontal com jardim e palmeira"
+              width="1333"
+              height="750"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="ambientes" id="ambientes">
+        <div class="container">
+          <p class="section-eyebrow reveal">Ambientes</p>
+          <h2 class="reveal">Uma casa pensada ambiente por ambiente</h2>
+
+          <div class="ambientes__grid">
+            <article class="ambiente-card reveal">
+              <img
+                src="images/ambientes/cozinha/cozinha-ilha-01.jpg"
+                alt="Cozinha gourmet com ilha central em pedra e marcenaria em madeira e branco"
+                loading="lazy"
+              />
+              <h3>Cozinha Gourmet</h3>
+              <p>Ilha central em pedra, adega climatizada e integração total com a sala de jantar.</p>
+            </article>
+
+            <article class="ambiente-card reveal">
+              <img
+                src="images/ambientes/sala/sala-pe-direito-duplo.jpg"
+                alt="Sala de estar com pé-direito duplo, escada em madeira suspensa e jardim de inverno"
+                loading="lazy"
+              />
+              <h3>Sala de Estar</h3>
+              <p>Pé-direito duplo, escada suspensa em madeira e jardim de inverno sob os degraus.</p>
+            </article>
+
+            <article class="ambiente-card reveal">
+              <img
+                src="images/ambientes/suites/suite-01.jpg"
+                alt="Suíte com marcenaria em madeira ripada e iluminação embutida no cabeceira"
+                loading="lazy"
+              />
+              <h3>Suítes</h3>
+              <p>Suítes com banheiro privativo, cada uma com acabamento e composição próprios.</p>
+            </article>
+
+            <article class="ambiente-card reveal">
+              <img
+                src="images/ambientes/closet/closet-planejado-01.jpg"
+                alt="Closet planejado com claraboia, gaveteiros e penteadeira"
+                loading="lazy"
+              />
+              <h3>Closet Planejado</h3>
+              <p>Closet amplo com claraboia natural, penteadeira e marcenaria sob medida.</p>
+            </article>
+
+            <article class="ambiente-card reveal">
+              <img
+                src="images/ambientes/home-theater/home-theater-01.jpg"
+                alt="Home theater com tela de projeção retrátil e adega embutida"
+                loading="lazy"
+              />
+              <h3>Home Theater</h3>
+              <p>Sala de cinema equipada, com tela retrátil e adega climatizada embutida.</p>
+            </article>
+
+            <article class="ambiente-card reveal">
+              <img
+                src="images/ambientes/area-gourmet/churrasqueira-pedra.jpg"
+                alt="Área gourmet externa com churrasqueira em pedra e cozinha integrada à piscina"
+                loading="lazy"
+              />
+              <h3>Área Gourmet</h3>
+              <p>Cozinha externa em pedra, churrasqueira e integração direta com a piscina.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="galeria" id="galeria">
+        <div class="container">
+          <p class="section-eyebrow reveal">Galeria</p>
+          <h2 class="reveal">Todos os ambientes, em detalhe</h2>
+
+          <div class="galeria__filtros reveal" data-galeria-filtros>
+            <button type="button" class="galeria__filtro is-active" data-filtro="todos">Todos</button>
+            <button type="button" class="galeria__filtro" data-filtro="fachada">Fachada</button>
+            <button type="button" class="galeria__filtro" data-filtro="cozinha">Cozinha</button>
+            <button type="button" class="galeria__filtro" data-filtro="sala">Sala</button>
+            <button type="button" class="galeria__filtro" data-filtro="suites">Suítes</button>
+            <button type="button" class="galeria__filtro" data-filtro="closet">Closet</button>
+            <button type="button" class="galeria__filtro" data-filtro="banheiros">Banheiros</button>
+            <button type="button" class="galeria__filtro" data-filtro="home-theater">Home Theater</button>
+            <button type="button" class="galeria__filtro" data-filtro="area-gourmet">Área Gourmet</button>
+          </div>
+
+          <div class="galeria__grid" data-galeria-grid>
+            <button type="button" class="galeria__item reveal" data-categoria="fachada">
+              <img src="images/fachada/fachada-dia.jpg" alt="Fachada diurna da Casa Betel" loading="lazy" />
+            </button>
+            <button type="button" class="galeria__item reveal" data-categoria="fachada">
+              <img src="images/fachada/fachada-noite-ampla.jpg" alt="Fachada noturna da Casa Betel, vista ampla" loading="lazy" />
+            </button>
+            <button type="button" class="galeria__item reveal" data-categoria="fachada">
+              <img src="images/fachada/piscina-area-gourmet.jpg" alt="Piscina e área gourmet ao entardecer" loading="lazy" />
+            </button>
+            <button type="button" class="galeria__item reveal" data-categoria="cozinha">
+              <img src="images/ambientes/cozinha/cozinha-ilha-02.jpg" alt="Cozinha integrada à sala de jantar" loading="lazy" />
+            </button>
+            <button type="button" class="galeria__item reveal" data-categoria="cozinha">
+              <img src="images/ambientes/cozinha/adega-climatizada.jpg" alt="Adega climatizada integrada à sala de jantar" loading="lazy" />
+            </button>
+            <button type="button" class="galeria__item reveal" data-categoria="sala">
+              <img src="images/ambientes/sala/sala-escada-jardim-inverno.jpg" alt="Jardim de inverno sob a escada da sala" loading="lazy" />
+            </button>
+            <button type="button" class="galeria__item reveal" data-categoria="suites">
+              <img src="images/ambientes/suites/suite-home-office.jpg" alt="Suíte com bancada de trabalho e painel ripado em madeira" loading="lazy" />
+            </button>
+            <button type="button" class="galeria__item reveal" data-categoria="suites">
+              <img src="images/ambientes/suites/suite-03.jpg" alt="Suíte com TV, escrivaninha e penteadeira" loading="lazy" />
+            </button>
+            <button type="button" class="galeria__item reveal" data-categoria="closet">
+              <img src="images/ambientes/closet/closet-planejado-02.jpg" alt="Detalhe da penteadeira do closet planejado" loading="lazy" />
+            </button>
+            <button type="button" class="galeria__item reveal" data-categoria="banheiros">
+              <img src="images/ambientes/banheiros/banheiro-banheira.jpg" alt="Banheiro de suíte com banheira de imersão" loading="lazy" />
+            </button>
+            <button type="button" class="galeria__item reveal" data-categoria="banheiros">
+              <img src="images/ambientes/banheiros/banheiro-suite.jpg" alt="Banheiro de suíte com revestimento em tons verdes" loading="lazy" />
+            </button>
+            <button type="button" class="galeria__item reveal" data-categoria="home-theater">
+              <img src="images/ambientes/home-theater/home-theater-02.jpg" alt="Poltronas do home theater com adega ao fundo" loading="lazy" />
+            </button>
+            <button type="button" class="galeria__item reveal" data-categoria="area-gourmet">
+              <img src="images/ambientes/area-gourmet/piscina-cozinha-externa.jpg" alt="Piscina vista da área gourmet, durante o dia" loading="lazy" />
+            </button>
+            <button type="button" class="galeria__item reveal" data-categoria="area-gourmet">
+              <img src="images/ambientes/area-gourmet/living-externo-balanco.jpg" alt="Living externo coberto, com balanço suspenso" loading="lazy" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="ficha-tecnica" id="ficha-tecnica">
+        <div class="container">
+          <p class="section-eyebrow reveal">Ficha Técnica</p>
+          <h2 class="reveal">O que compõe a Casa Betel</h2>
+
+          <dl class="ficha-tecnica__lista reveal">
+            <div class="ficha-tecnica__item">
+              <dt>Projeto</dt>
+              <dd>Casa Betel — Lote 460</dd>
+            </div>
+            <div class="ficha-tecnica__item">
+              <dt>Construtora</dt>
+              <dd>Elevare</dd>
+            </div>
+            <div class="ficha-tecnica__item">
+              <dt>Estilo arquitetônico</dt>
+              <dd>Contemporâneo</dd>
+            </div>
+            <div class="ficha-tecnica__item">
+              <dt>Pavimentos</dt>
+              <dd>2 pavimentos</dd>
+            </div>
+            <div class="ficha-tecnica__item">
+              <dt>Suítes</dt>
+              <dd>Múltiplas suítes com banheiro privativo <span class="ficha-tecnica__pendente">(número exato a confirmar)</span></dd>
+            </div>
+            <div class="ficha-tecnica__item">
+              <dt>Ambientes de lazer</dt>
+              <dd>Piscina, área gourmet externa e home theater</dd>
+            </div>
+            <div class="ficha-tecnica__item">
+              <dt>Área do terreno</dt>
+              <dd class="ficha-tecnica__pendente">A confirmar</dd>
+            </div>
+            <div class="ficha-tecnica__item">
+              <dt>Área construída</dt>
+              <dd class="ficha-tecnica__pendente">A confirmar</dd>
+            </div>
+            <div class="ficha-tecnica__item">
+              <dt>Vagas de garagem</dt>
+              <dd class="ficha-tecnica__pendente">A confirmar</dd>
+            </div>
+            <div class="ficha-tecnica__item">
+              <dt>Localização</dt>
+              <dd class="ficha-tecnica__pendente">A confirmar</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="diferenciais" id="diferenciais">
+        <div class="container">
+          <p class="section-eyebrow reveal">Diferenciais</p>
+          <h2 class="reveal">O que torna esse projeto único</h2>
+
+          <div class="diferenciais__grid">
+            <article class="diferencial-card reveal">
+              <h3>Pé-direito duplo</h3>
+              <p>Sala de estar com pé-direito duplo e escada suspensa em madeira.</p>
+            </article>
+            <article class="diferencial-card reveal">
+              <h3>Adega climatizada</h3>
+              <p>Adega embutida, integrada à sala de jantar.</p>
+            </article>
+            <article class="diferencial-card reveal">
+              <h3>Home theater</h3>
+              <p>Sala de cinema equipada com tela retrátil e adega própria.</p>
+            </article>
+            <article class="diferencial-card reveal">
+              <h3>Closet planejado</h3>
+              <p>Closet amplo com claraboia natural e marcenaria sob medida.</p>
+            </article>
+            <article class="diferencial-card reveal">
+              <h3>Área gourmet completa</h3>
+              <p>Piscina, churrasqueira em pedra e cozinha externa integradas.</p>
+            </article>
+            <article class="diferencial-card reveal">
+              <h3>Tour virtual 360°</h3>
+              <p>
+                <a href="https://twinmotion.unrealengine.com/panorama/hjsaTqUKO6OPCH8I" target="_blank" rel="noopener">
+                  Explore a casa em um tour virtual completo →
+                </a>
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="construtora" id="construtora">
+        <div class="container construtora__grid">
+          <div class="construtora__text reveal">
+            <p class="section-eyebrow">A Construtora</p>
+            <h2>Elevare</h2>
+            <p>
+              A Casa Betel é um projeto assinado pela Elevare, responsável pela concepção
+              arquitetônica e pelo desenvolvimento deste empreendimento residencial de
+              alto padrão.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contato" id="contato">
+        <div class="container">
+          <p class="section-eyebrow reveal">Contato</p>
+          <h2 class="reveal">Fale com a Elevare</h2>
+          <p class="contato__aviso reveal">
+            Os canais de contato (WhatsApp, telefone, e-mail e Instagram) serão adicionados
+            em breve.
+          </p>
+        </div>
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <span class="logo">Elevare</span>
+        <p>© <span data-ano-atual></span> Elevare. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <div class="lightbox" data-lightbox hidden>
+      <button type="button" class="lightbox__close" data-lightbox-close aria-label="Fechar">&times;</button>
+      <button type="button" class="lightbox__prev" data-lightbox-prev aria-label="Imagem anterior">&larr;</button>
+      <img class="lightbox__image" data-lightbox-image src="" alt="" />
+      <button type="button" class="lightbox__next" data-lightbox-next aria-label="Próxima imagem">&rarr;</button>
+    </div>
 
     <script type="module" src="js/main.js"></script>
   </body>
