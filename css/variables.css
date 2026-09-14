@@ -36,7 +36,7 @@
   --shadow-md: 0 12px 32px rgba(20, 18, 16, 0.14);
   --shadow-lg: 0 24px 48px rgba(20, 18, 16, 0.18);
 
-  /* WhatsApp */
-  --color-whatsapp: #25d366;
-  --color-whatsapp-dark: #1da851;
+  /* WhatsApp — adaptado à paleta do site (sem o verde padrão da marca) */
+  --color-whatsapp: var(--color-ink);
+  --color-whatsapp-dark: #000000;
 }

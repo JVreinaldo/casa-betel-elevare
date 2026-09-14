@@ -83,6 +83,17 @@
 
 .apresentacao__image {
   align-self: center;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: transform var(--transition-smooth);
+}
+
+.apresentacao__image:hover {
+  transform: scale(1.01);
 }
 
 .apresentacao__image img {
@@ -190,28 +201,101 @@
   background-color: var(--color-surface);
 }
 
-.ficha-tecnica__lista {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0;
-  max-width: 760px;
+.ficha-tecnica__intro {
+  max-width: 62ch;
+  color: var(--color-ink-soft);
+  margin-block-end: var(--space-lg);
 }
 
-.ficha-tecnica__item {
-  display: flex;
-  justify-content: space-between;
+.ficha-tecnica__intro em {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.ficha-tecnica__stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-md);
-  padding-block: var(--space-sm);
+  margin-block-end: var(--space-xl);
+  padding-block-end: var(--space-xl);
   border-block-end: 1px solid var(--color-border);
 }
 
-.ficha-tecnica__item dt {
+.ficha-tecnica__stats li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.ficha-tecnica__stats strong {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  color: var(--color-ink);
+}
+
+.ficha-tecnica__stats span {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+@media (min-width: 640px) {
+  .ficha-tecnica__stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.ficha-tecnica__plates {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
+}
+
+.ficha-tecnica__plate {
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+  background-color: var(--color-bg);
+  transition: box-shadow var(--transition-smooth);
+}
+
+.ficha-tecnica__plate:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.ficha-tecnica__plate img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.ficha-tecnica__credito {
+  margin-block-start: var(--space-md);
+  font-size: 0.8rem;
   color: var(--color-text-muted);
 }
 
-.ficha-tecnica__item dd {
-  text-align: right;
-  font-weight: 500;
+@media (min-width: 860px) {
+  .ficha-tecnica__plates {
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .ficha-tecnica__plate--quadro {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .ficha-tecnica__plate--situacao {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  .ficha-tecnica__plate--titulo {
+    grid-column: 1;
+    grid-row: 2;
+  }
 }
 
 .ficha-tecnica__pendente {
@@ -264,23 +348,43 @@
 
 /* Contato */
 .contato {
-  padding-block: var(--space-3xl);
+  padding-block: var(--space-xl);
+}
+
+.contato__card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  align-items: flex-start;
+  padding: var(--space-xl);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+}
+
+.contato__info h2 {
+  margin-block-end: var(--space-xs);
 }
 
 .contato__texto {
   color: var(--color-ink-soft);
-  max-width: 50ch;
-  margin-block-end: var(--space-lg);
-}
-
-.contato .btn {
-  margin-block-end: var(--space-md);
+  max-width: 46ch;
+  margin-block-end: 0.35rem;
 }
 
 .contato__aviso {
   color: var(--color-text-muted);
   font-style: italic;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+}
+
+@media (min-width: 720px) {
+  .contato__card {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-xl);
+  }
 }
 
 /* Footer */

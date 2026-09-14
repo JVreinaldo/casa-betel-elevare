@@ -102,14 +102,15 @@
   justify-content: center;
   border-radius: 50%;
   background-color: var(--color-whatsapp);
-  color: var(--color-surface);
+  color: var(--color-accent);
   box-shadow: var(--shadow-md);
   transition: transform var(--transition-smooth), box-shadow var(--transition-smooth),
-    background-color var(--transition-smooth);
+    background-color var(--transition-smooth), color var(--transition-smooth);
 }
 
 .whatsapp-float:hover {
   background-color: var(--color-whatsapp-dark);
+  color: var(--color-surface);
   transform: translateY(-3px) scale(1.05);
   box-shadow: var(--shadow-lg);
 }
@@ -295,13 +296,14 @@
 .nav__list {
   display: flex;
   align-items: center;
-  gap: var(--space-lg);
+  gap: var(--space-md);
 }
 
 .nav__link {
   position: relative;
-  padding-block: 0.25rem;
-  font-size: 0.9rem;
+  padding: 0.4rem 0.65rem;
+  font-size: 0.88rem;
+  letter-spacing: 0.01em;
   color: inherit;
 }
 
