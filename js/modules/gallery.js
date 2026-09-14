@@ -35,11 +35,14 @@ function initLightbox() {
   let itensVisiveis = [];
   let indiceAtual = 0;
 
-  const abrir = (item) => {
+  const getImg = (trigger) => trigger.tagName === "IMG" ? trigger : trigger.querySelector("img");
+
+  const abrir = (trigger) => {
+    const grupo = trigger.dataset.lightboxGroup || "default";
     itensVisiveis = Array.from(
-      document.querySelectorAll("[data-galeria-grid] .galeria__item:not([hidden])")
-    );
-    indiceAtual = itensVisiveis.indexOf(item);
+      document.querySelectorAll(`[data-lightbox-trigger][data-lightbox-group="${grupo}"]`)
+    ).filter((el) => !el.closest("[hidden]") && el.offsetParent !== null);
+    indiceAtual = itensVisiveis.indexOf(trigger);
     mostrarImagemAtual();
     lightbox.hidden = false;
     document.body.classList.add("no-scroll");
@@ -51,11 +54,14 @@ function initLightbox() {
   };
 
   const mostrarImagemAtual = () => {
-    const item = itensVisiveis[indiceAtual];
-    if (!item) return;
-    const img = item.querySelector("img");
+    const trigger = itensVisiveis[indiceAtual];
+    if (!trigger) return;
+    const img = getImg(trigger);
     imagem.src = img.src;
     imagem.alt = img.alt;
+    const multiplo = itensVisiveis.length > 1;
+    prevBtn.hidden = !multiplo;
+    nextBtn.hidden = !multiplo;
   };
 
   const irPara = (delta) => {
@@ -63,8 +69,8 @@ function initLightbox() {
     mostrarImagemAtual();
   };
 
-  document.querySelectorAll("[data-galeria-grid] .galeria__item").forEach((item) => {
-    item.addEventListener("click", () => abrir(item));
+  document.querySelectorAll("[data-lightbox-trigger]").forEach((trigger) => {
+    trigger.addEventListener("click", () => abrir(trigger));
   });
 
   closeBtn?.addEventListener("click", fechar);
