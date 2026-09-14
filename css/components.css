@@ -173,9 +173,9 @@
 
 .galeria__filtro.is-active,
 .galeria__filtro:hover {
-  background-color: var(--color-accent);
+  background-color: var(--color-bg);
   color: var(--color-ink);
-  border-color: var(--color-accent);
+  border-color: var(--color-bg);
   opacity: 1;
 }
 
