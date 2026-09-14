@@ -192,21 +192,23 @@
 
 /* Filtros da galeria */
 .galeria__filtro {
-  padding: 0.55rem 1.15rem;
-  font-size: 0.8rem;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.78rem;
   letter-spacing: 0.02em;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-dark-border);
   border-radius: 999px;
-  color: var(--color-ink-soft);
+  color: var(--color-bg);
+  opacity: 0.65;
   transition: background-color var(--transition-smooth), color var(--transition-smooth),
-    border-color var(--transition-smooth);
+    border-color var(--transition-smooth), opacity var(--transition-smooth);
 }
 
 .galeria__filtro.is-active,
 .galeria__filtro:hover {
-  background-color: var(--color-ink);
-  color: var(--color-bg);
-  border-color: var(--color-ink);
+  background-color: var(--color-accent);
+  color: var(--color-ink);
+  border-color: var(--color-accent);
+  opacity: 1;
 }
 
 /* Lightbox */
