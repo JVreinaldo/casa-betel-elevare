@@ -83,17 +83,6 @@
 
 .apresentacao__image {
   align-self: center;
-  display: block;
-  width: 100%;
-  padding: 0;
-  border: none;
-  background: none;
-  cursor: pointer;
-  transition: transform var(--transition-smooth);
-}
-
-.apresentacao__image:hover {
-  transform: scale(1.01);
 }
 
 .apresentacao__image img {
