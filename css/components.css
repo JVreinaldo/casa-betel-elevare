@@ -157,38 +157,6 @@
   letter-spacing: 0.01em;
 }
 
-.diferencial-card {
-  border-radius: 2px;
-}
-
-.diferencial-card {
-  padding: var(--space-lg);
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
-  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth),
-    border-color var(--transition-smooth);
-}
-
-.diferencial-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-  border-color: transparent;
-}
-
-.diferencial-card h3 {
-  font-size: 1.05rem;
-  margin-block-end: 0.35rem;
-}
-
-.diferencial-card p {
-  color: var(--color-text-muted);
-  font-size: 0.9rem;
-}
-
-.diferencial-card a {
-  color: var(--color-accent-dark);
-  font-weight: 500;
-}
 
 /* Filtros da galeria */
 .galeria__filtro {
