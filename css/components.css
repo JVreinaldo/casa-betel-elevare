@@ -33,6 +33,119 @@
   background-color: var(--color-accent-dark);
 }
 
+.btn--outline {
+  border: 1px solid var(--color-surface);
+  color: var(--color-surface);
+}
+
+.btn--outline:hover {
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+}
+
+/* Cards */
+.ambiente-card img,
+.diferencial-card {
+  border-radius: 2px;
+}
+
+.ambiente-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  margin-block-end: var(--space-sm);
+}
+
+.ambiente-card h3 {
+  font-size: 1.1rem;
+  margin-block-end: 0.35rem;
+}
+
+.ambiente-card p {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.diferencial-card {
+  padding: var(--space-md);
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+}
+
+.diferencial-card h3 {
+  font-size: 1.05rem;
+  margin-block-end: 0.35rem;
+}
+
+.diferencial-card p {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.diferencial-card a {
+  color: var(--color-accent-dark);
+  font-weight: 500;
+}
+
+/* Filtros da galeria */
+.galeria__filtro {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  border: 1px solid var(--color-border);
+  color: var(--color-ink-soft);
+  transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+.galeria__filtro.is-active,
+.galeria__filtro:hover {
+  background-color: var(--color-ink);
+  color: var(--color-bg);
+  border-color: var(--color-ink);
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(20, 18, 16, 0.92);
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox__image {
+  max-width: min(90vw, 1100px);
+  max-height: 85vh;
+  object-fit: contain;
+}
+
+.lightbox__close,
+.lightbox__prev,
+.lightbox__next {
+  position: absolute;
+  color: var(--color-surface);
+  font-size: 1.75rem;
+  padding: var(--space-sm);
+}
+
+.lightbox__close {
+  inset-block-start: var(--space-sm);
+  inset-inline-end: var(--space-sm);
+}
+
+.lightbox__prev {
+  inset-inline-start: var(--space-sm);
+}
+
+.lightbox__next {
+  inset-inline-end: var(--space-sm);
+}
+
 /* Header */
 .site-header {
   position: fixed;
@@ -96,6 +209,8 @@
 
 /* Botão hambúrguer (mobile) */
 .nav-toggle {
+  position: relative;
+  z-index: 95;
   display: none;
   flex-direction: column;
   gap: 5px;
