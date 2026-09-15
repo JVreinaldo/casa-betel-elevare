@@ -403,6 +403,12 @@
   margin-block-start: 0.15rem;
 }
 
+.contato__acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
 @media (min-width: 720px) {
   .contato__card {
     flex-direction: row;
@@ -429,24 +435,6 @@
 .site-footer p {
   color: var(--color-text-muted);
   font-size: 0.85rem;
-}
-
-.site-footer__social {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.85rem;
-  color: var(--color-ink-soft);
-  transition: color var(--transition-smooth);
-}
-
-.site-footer__social:hover {
-  color: var(--color-accent-dark);
-}
-
-.site-footer__social svg {
-  width: 18px;
-  height: 18px;
 }
 
 @media (min-width: 640px) {
