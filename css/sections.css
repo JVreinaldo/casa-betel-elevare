@@ -393,12 +393,6 @@
   color: var(--color-ink);
 }
 
-.contato__aviso {
-  color: var(--color-text-muted);
-  font-size: 0.78rem;
-  margin-block-start: 0.15rem;
-}
-
 .contato__acoes {
   display: flex;
   flex-wrap: wrap;
