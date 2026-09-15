@@ -9,18 +9,21 @@ function initFilters() {
 
   if (!filtros.length || !itens.length) return;
 
+  const aplicarFiltro = (categoria) => {
+    itens.forEach((item) => {
+      item.hidden = item.dataset.categoria !== categoria;
+    });
+  };
+
   filtros.forEach((botao) => {
     botao.addEventListener("click", () => {
-      const categoria = botao.dataset.filtro;
-
       filtros.forEach((b) => b.classList.toggle("is-active", b === botao));
-
-      itens.forEach((item) => {
-        const mostrar = item.dataset.categoria === categoria;
-        item.hidden = !mostrar;
-      });
+      aplicarFiltro(botao.dataset.filtro);
     });
   });
+
+  const ativo = document.querySelector("[data-filtro].is-active") || filtros[0];
+  aplicarFiltro(ativo.dataset.filtro);
 }
 
 function initLightbox() {
