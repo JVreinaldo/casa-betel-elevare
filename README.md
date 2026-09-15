@@ -63,7 +63,7 @@ O layout foi pensado para transmitir sofisticação sem perder a leitura fácil 
 ## Créditos
 
 - **Construtora:** Elevare
-- **Projeto arquitetônico:** Paulo André Reinaldo — CREA-SC 15442-9
+- **Projeto arquitetônico:** Paulo André Reinaldo
 
 ## Autor
 
