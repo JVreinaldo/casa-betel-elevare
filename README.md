@@ -60,16 +60,6 @@ O layout foi pensado para transmitir sofisticação sem perder a leitura fácil 
     └── preview.jpg
 ```
 
-## Como executar localmente
-
-1. Clone o repositório:
-   ```
-   git clone https://github.com/JVreinaldo/casa-betel-elevare.git
-   ```
-2. Abra a pasta no VS Code.
-3. Instale a extensão **Live Server**.
-4. Clique com o botão direito em `index.html` e escolha **Open with Live Server**.
-
 ## Créditos
 
 - **Construtora:** Elevare
