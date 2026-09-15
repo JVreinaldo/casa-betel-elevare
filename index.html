@@ -32,8 +32,9 @@
     <link
       rel="preload"
       as="image"
-      href="images/fachada/fachada-noite-2000.jpg"
-      imagesrcset="images/fachada/fachada-noite-2000.jpg 2000w, images/fachada/fachada-noite.jpg 4000w"
+      type="image/webp"
+      href="images/fachada/fachada-noite-2000.webp"
+      imagesrcset="images/fachada/fachada-noite-2000.webp 2000w, images/fachada/fachada-noite-full.webp 4000w"
       imagesizes="100vw"
       fetchpriority="high"
     />
@@ -85,17 +86,24 @@
 
     <main>
       <section class="hero" id="inicio">
-        <img
-          class="hero__image"
-          src="images/fachada/fachada-noite.jpg"
-          srcset="images/fachada/fachada-noite-2000.jpg 2000w, images/fachada/fachada-noite.jpg 4000w"
-          sizes="100vw"
-          alt="Fachada noturna da Casa Betel, com iluminação embutida no ripado de madeira e na escadaria de acesso"
-          width="4000"
-          height="2250"
-          fetchpriority="high"
-          decoding="async"
-        />
+        <picture>
+          <source
+            type="image/webp"
+            srcset="images/fachada/fachada-noite-2000.webp 2000w, images/fachada/fachada-noite-full.webp 4000w"
+            sizes="100vw"
+          />
+          <img
+            class="hero__image"
+            src="images/fachada/fachada-noite.jpg"
+            srcset="images/fachada/fachada-noite-2000.jpg 2000w, images/fachada/fachada-noite.jpg 4000w"
+            sizes="100vw"
+            alt="Fachada noturna da Casa Betel, com iluminação embutida no ripado de madeira e na escadaria de acesso"
+            width="4000"
+            height="2250"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </picture>
         <div class="hero__overlay"></div>
         <div class="hero__content container">
           <h1 class="hero__title reveal">Casa Betel</h1>
@@ -124,16 +132,23 @@
             </p>
           </div>
           <div class="apresentacao__image reveal">
-            <img
-              src="images/fachada/fachada-dia.jpg"
-              srcset="images/fachada/fachada-dia-2000.jpg 2000w, images/fachada/fachada-dia.jpg 4000w"
-              sizes="100vw"
-              alt="Fachada diurna da Casa Betel, vista frontal com jardim e palmeira"
-              width="4000"
-              height="2250"
-              loading="lazy"
-              decoding="async"
-            />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="images/fachada/fachada-dia-2000.webp 2000w, images/fachada/fachada-dia-full.webp 4000w"
+                sizes="100vw"
+              />
+              <img
+                src="images/fachada/fachada-dia.jpg"
+                srcset="images/fachada/fachada-dia-2000.jpg 2000w, images/fachada/fachada-dia.jpg 4000w"
+                sizes="100vw"
+                alt="Fachada diurna da Casa Betel, vista frontal com jardim e palmeira"
+                width="4000"
+                height="2250"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
           </div>
         </div>
       </section>
@@ -146,96 +161,120 @@
           <div class="ambientes__grid">
             <article class="ambiente-card ambiente-card--wide reveal">
               <div class="ambiente-card__media">
+                <picture>
+                  <source srcset="images/ambientes/sala/sala-pe-direito-duplo-thumb.webp" type="image/webp" />
                 <img
                   src="images/ambientes/sala/sala-pe-direito-duplo-thumb.jpg"
-                  alt="Sala de estar com pé-direito duplo, escada em madeira suspensa e jardim de inverno"
+                  alt="                  "
                   loading="lazy"
                   decoding="async"
                 />
+                </picture>
                 <span class="ambiente-card__caption">Living</span>
               </div>
             </article>
 
             <article class="ambiente-card reveal">
               <div class="ambiente-card__media">
+                <picture>
+                  <source srcset="images/ambientes/cozinha/cozinha-ilha-01-thumb.webp" type="image/webp" />
                 <img
                   src="images/ambientes/cozinha/cozinha-ilha-01-thumb.jpg"
-                  alt="Cozinha gourmet com ilha central em pedra"
+                  alt="                  "
                   loading="lazy"
                   decoding="async"
                 />
+                </picture>
                 <span class="ambiente-card__caption">Cozinha</span>
               </div>
             </article>
 
             <article class="ambiente-card reveal">
               <div class="ambiente-card__media">
+                <picture>
+                  <source srcset="images/ambientes/area-gourmet/churrasqueira-pedra-thumb.webp" type="image/webp" />
                 <img
                   src="images/ambientes/area-gourmet/churrasqueira-pedra-thumb.jpg"
-                  alt="Área gourmet externa com churrasqueira em pedra"
+                  alt="                  "
                   loading="lazy"
                   decoding="async"
                 />
+                </picture>
                 <span class="ambiente-card__caption">Área Gourmet</span>
               </div>
             </article>
 
             <article class="ambiente-card reveal">
               <div class="ambiente-card__media">
+                <picture>
+                  <source srcset="images/ambientes/suites/suite-01-thumb.webp" type="image/webp" />
                 <img
                   src="images/ambientes/suites/suite-01-thumb.jpg"
-                  alt="Suíte com marcenaria em madeira ripada"
+                  alt="                  "
                   loading="lazy"
                   decoding="async"
                 />
+                </picture>
                 <span class="ambiente-card__caption">Suítes</span>
               </div>
             </article>
 
             <article class="ambiente-card reveal">
               <div class="ambiente-card__media">
+                <picture>
+                  <source srcset="images/ambientes/closet/closet-planejado-01-thumb.webp" type="image/webp" />
                 <img
                   src="images/ambientes/closet/closet-planejado-01-thumb.jpg"
-                  alt="Closet planejado com claraboia e marcenaria sob medida"
+                  alt="                  "
                   loading="lazy"
                   decoding="async"
                 />
+                </picture>
                 <span class="ambiente-card__caption">Closet</span>
               </div>
             </article>
 
             <article class="ambiente-card reveal">
               <div class="ambiente-card__media">
+                <picture>
+                  <source srcset="images/ambientes/banheiros/banheiro-banheira-thumb.webp" type="image/webp" />
                 <img
                   src="images/ambientes/banheiros/banheiro-banheira-thumb.jpg"
-                  alt="Banheiro de suíte com banheira de imersão"
+                  alt="                  "
                   loading="lazy"
                   decoding="async"
                 />
+                </picture>
                 <span class="ambiente-card__caption">Banheiros</span>
               </div>
             </article>
 
             <article class="ambiente-card reveal">
               <div class="ambiente-card__media">
+                <picture>
+                  <source srcset="images/ambientes/home-theater/home-theater-01-thumb.webp" type="image/webp" />
                 <img
                   src="images/ambientes/home-theater/home-theater-01-thumb.jpg"
-                  alt="Home theater com tela de projeção retrátil"
+                  alt="                  "
                   loading="lazy"
                   decoding="async"
                 />
+                </picture>
                 <span class="ambiente-card__caption">Home Theater</span>
               </div>
             </article>
 
             <article class="ambiente-card reveal">
               <div class="ambiente-card__media">
+                <picture>
+                  <source srcset="images/fachada/piscina-area-gourmet-thumb.webp" type="image/webp" />
                 <img
                   src="images/fachada/piscina-area-gourmet-thumb.jpg"
-                  alt="Piscina e área externa ao entardecer"
+                  alt="                  "
                   loading="lazy"
                   decoding="async"
                 />
+                </picture>
                 <span class="ambiente-card__caption">Piscina</span>
               </div>
             </article>
@@ -262,130 +301,256 @@
 
           <div class="galeria__grid" data-galeria-grid>
             <button type="button" class="galeria__item reveal" data-categoria="fachada" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/fachada/fachada-dia-thumb.jpg" data-full="images/fachada/fachada-dia.jpg" alt="Fachada da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/fachada/fachada-dia-thumb.webp" type="image/webp" />
+                <img src="images/fachada/fachada-dia-thumb.jpg" data-full="images/fachada/fachada-dia-full.webp" alt="Fachada da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="fachada" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/fachada/fachada-dia-02-thumb.jpg" data-full="images/fachada/fachada-dia-02.jpg" alt="Fachada da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/fachada/fachada-dia-02-thumb.webp" type="image/webp" />
+                <img src="images/fachada/fachada-dia-02-thumb.jpg" data-full="images/fachada/fachada-dia-02-full.webp" alt="Fachada da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="fachada" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/fachada/fachada-dia-aclive-thumb.jpg" data-full="images/fachada/fachada-dia-aclive.jpg" alt="Fachada da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/fachada/fachada-dia-aclive-thumb.webp" type="image/webp" />
+                <img src="images/fachada/fachada-dia-aclive-thumb.jpg" data-full="images/fachada/fachada-dia-aclive-full.webp" alt="Fachada da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="fachada" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/fachada/fachada-noite-thumb.jpg" data-full="images/fachada/fachada-noite.jpg" alt="Fachada da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/fachada/fachada-noite-thumb.webp" type="image/webp" />
+                <img src="images/fachada/fachada-noite-thumb.jpg" data-full="images/fachada/fachada-noite-full.webp" alt="Fachada da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="fachada" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/fachada/fachada-noite-ampla-thumb.jpg" data-full="images/fachada/fachada-noite-ampla.jpg" alt="Fachada da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/fachada/fachada-noite-ampla-thumb.webp" type="image/webp" />
+                <img src="images/fachada/fachada-noite-ampla-thumb.jpg" data-full="images/fachada/fachada-noite-ampla-full.webp" alt="Fachada da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="fachada" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/fachada/fachada-noite-lateral-thumb.jpg" data-full="images/fachada/fachada-noite-lateral.jpg" alt="Fachada da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/fachada/fachada-noite-lateral-thumb.webp" type="image/webp" />
+                <img src="images/fachada/fachada-noite-lateral-thumb.jpg" data-full="images/fachada/fachada-noite-lateral-full.webp" alt="Fachada da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="fachada" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/fachada/fachada-noite-aclive-thumb.jpg" data-full="images/fachada/fachada-noite-aclive.jpg" alt="Fachada da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/fachada/fachada-noite-aclive-thumb.webp" type="image/webp" />
+                <img src="images/fachada/fachada-noite-aclive-thumb.jpg" data-full="images/fachada/fachada-noite-aclive-full.webp" alt="Fachada da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="fachada" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/fachada/fachada-noite-fundos-thumb.jpg" data-full="images/fachada/fachada-noite-fundos.jpg" alt="Fachada da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/fachada/fachada-noite-fundos-thumb.webp" type="image/webp" />
+                <img src="images/fachada/fachada-noite-fundos-thumb.jpg" data-full="images/fachada/fachada-noite-fundos-full.webp" alt="Fachada da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="area-gourmet" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/fachada/piscina-area-gourmet-thumb.jpg" data-full="images/fachada/piscina-area-gourmet.jpg" alt="Área gourmet da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/fachada/piscina-area-gourmet-thumb.webp" type="image/webp" />
+                <img src="images/fachada/piscina-area-gourmet-thumb.jpg" data-full="images/fachada/piscina-area-gourmet-full.webp" alt="Área gourmet da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="area-gourmet" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/ambientes/area-gourmet/churrasqueira-pedra-thumb.jpg" data-full="images/ambientes/area-gourmet/churrasqueira-pedra.jpg" alt="Área gourmet da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/ambientes/area-gourmet/churrasqueira-pedra-thumb.webp" type="image/webp" />
+                <img src="images/ambientes/area-gourmet/churrasqueira-pedra-thumb.jpg" data-full="images/ambientes/area-gourmet/churrasqueira-pedra-full.webp" alt="Área gourmet da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="area-gourmet" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/ambientes/area-gourmet/living-externo-balanco-thumb.jpg" data-full="images/ambientes/area-gourmet/living-externo-balanco.jpg" alt="Área gourmet da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/ambientes/area-gourmet/living-externo-balanco-thumb.webp" type="image/webp" />
+                <img src="images/ambientes/area-gourmet/living-externo-balanco-thumb.jpg" data-full="images/ambientes/area-gourmet/living-externo-balanco-full.webp" alt="Área gourmet da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="area-gourmet" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/ambientes/area-gourmet/piscina-cozinha-externa-thumb.jpg" data-full="images/ambientes/area-gourmet/piscina-cozinha-externa.jpg" alt="Área gourmet da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/ambientes/area-gourmet/piscina-cozinha-externa-thumb.webp" type="image/webp" />
+                <img src="images/ambientes/area-gourmet/piscina-cozinha-externa-thumb.jpg" data-full="images/ambientes/area-gourmet/piscina-cozinha-externa-full.webp" alt="Área gourmet da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="area-gourmet" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/ambientes/area-gourmet/area-externa-noite-01-thumb.jpg" data-full="images/ambientes/area-gourmet/area-externa-noite-01.jpg" alt="Área gourmet da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/ambientes/area-gourmet/area-externa-noite-01-thumb.webp" type="image/webp" />
+                <img src="images/ambientes/area-gourmet/area-externa-noite-01-thumb.jpg" data-full="images/ambientes/area-gourmet/area-externa-noite-01-full.webp" alt="Área gourmet da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="area-gourmet" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/ambientes/area-gourmet/area-gourmet-dia-thumb.jpg" data-full="images/ambientes/area-gourmet/area-gourmet-dia.jpg" alt="Área gourmet da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/ambientes/area-gourmet/area-gourmet-dia-thumb.webp" type="image/webp" />
+                <img src="images/ambientes/area-gourmet/area-gourmet-dia-thumb.jpg" data-full="images/ambientes/area-gourmet/area-gourmet-dia-full.webp" alt="Área gourmet da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="area-gourmet" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/ambientes/area-gourmet/living-externo-01-thumb.jpg" data-full="images/ambientes/area-gourmet/living-externo-01.jpg" alt="Área gourmet da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/ambientes/area-gourmet/living-externo-01-thumb.webp" type="image/webp" />
+                <img src="images/ambientes/area-gourmet/living-externo-01-thumb.jpg" data-full="images/ambientes/area-gourmet/living-externo-01-full.webp" alt="Área gourmet da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="area-gourmet" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/ambientes/area-gourmet/churrasqueira-detalhe-thumb.jpg" data-full="images/ambientes/area-gourmet/churrasqueira-detalhe.jpg" alt="Área gourmet da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/ambientes/area-gourmet/churrasqueira-detalhe-thumb.webp" type="image/webp" />
+                <img src="images/ambientes/area-gourmet/churrasqueira-detalhe-thumb.jpg" data-full="images/ambientes/area-gourmet/churrasqueira-detalhe-full.webp" alt="Área gourmet da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="cozinha" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/ambientes/cozinha/cozinha-ilha-01-thumb.jpg" data-full="images/ambientes/cozinha/cozinha-ilha-01.jpg" alt="Cozinha gourmet da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/ambientes/cozinha/cozinha-ilha-01-thumb.webp" type="image/webp" />
+                <img src="images/ambientes/cozinha/cozinha-ilha-01-thumb.jpg" data-full="images/ambientes/cozinha/cozinha-ilha-01-full.webp" alt="Cozinha gourmet da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="cozinha" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/ambientes/cozinha/cozinha-ilha-02-thumb.jpg" data-full="images/ambientes/cozinha/cozinha-ilha-02.jpg" alt="Cozinha gourmet da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/ambientes/cozinha/cozinha-ilha-02-thumb.webp" type="image/webp" />
+                <img src="images/ambientes/cozinha/cozinha-ilha-02-thumb.jpg" data-full="images/ambientes/cozinha/cozinha-ilha-02-full.webp" alt="Cozinha gourmet da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="cozinha" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/ambientes/cozinha/adega-climatizada-thumb.jpg" data-full="images/ambientes/cozinha/adega-climatizada.jpg" alt="Cozinha gourmet da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/ambientes/cozinha/adega-climatizada-thumb.webp" type="image/webp" />
+                <img src="images/ambientes/cozinha/adega-climatizada-thumb.jpg" data-full="images/ambientes/cozinha/adega-climatizada-full.webp" alt="Cozinha gourmet da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="cozinha" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/ambientes/cozinha/cozinha-area-gourmet-thumb.jpg" data-full="images/ambientes/cozinha/cozinha-area-gourmet.jpg" alt="Cozinha gourmet da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/ambientes/cozinha/cozinha-area-gourmet-thumb.webp" type="image/webp" />
+                <img src="images/ambientes/cozinha/cozinha-area-gourmet-thumb.jpg" data-full="images/ambientes/cozinha/cozinha-area-gourmet-full.webp" alt="Cozinha gourmet da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="sala" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/ambientes/sala/sala-pe-direito-duplo-thumb.jpg" data-full="images/ambientes/sala/sala-pe-direito-duplo.jpg" alt="Sala de estar da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/ambientes/sala/sala-pe-direito-duplo-thumb.webp" type="image/webp" />
+                <img src="images/ambientes/sala/sala-pe-direito-duplo-thumb.jpg" data-full="images/ambientes/sala/sala-pe-direito-duplo-full.webp" alt="Sala de estar da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="sala" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/ambientes/sala/sala-escada-jardim-inverno-thumb.jpg" data-full="images/ambientes/sala/sala-escada-jardim-inverno.jpg" alt="Sala de estar da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/ambientes/sala/sala-escada-jardim-inverno-thumb.webp" type="image/webp" />
+                <img src="images/ambientes/sala/sala-escada-jardim-inverno-thumb.jpg" data-full="images/ambientes/sala/sala-escada-jardim-inverno-full.webp" alt="Sala de estar da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="sala" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/ambientes/sala/sala-tv-escada-thumb.jpg" data-full="images/ambientes/sala/sala-tv-escada.jpg" alt="Sala de estar da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/ambientes/sala/sala-tv-escada-thumb.webp" type="image/webp" />
+                <img src="images/ambientes/sala/sala-tv-escada-thumb.jpg" data-full="images/ambientes/sala/sala-tv-escada-full.webp" alt="Sala de estar da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="sala" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/ambientes/sala/sala-sofa-thumb.jpg" data-full="images/ambientes/sala/sala-sofa.jpg" alt="Sala de estar da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/ambientes/sala/sala-sofa-thumb.webp" type="image/webp" />
+                <img src="images/ambientes/sala/sala-sofa-thumb.jpg" data-full="images/ambientes/sala/sala-sofa-full.webp" alt="Sala de estar da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="suites" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/ambientes/suites/suite-01-thumb.jpg" data-full="images/ambientes/suites/suite-01.jpg" alt="Suíte da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/ambientes/suites/suite-01-thumb.webp" type="image/webp" />
+                <img src="images/ambientes/suites/suite-01-thumb.jpg" data-full="images/ambientes/suites/suite-01-full.webp" alt="Suíte da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="suites" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/ambientes/suites/suite-home-office-thumb.jpg" data-full="images/ambientes/suites/suite-home-office.jpg" alt="Suíte da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/ambientes/suites/suite-home-office-thumb.webp" type="image/webp" />
+                <img src="images/ambientes/suites/suite-home-office-thumb.jpg" data-full="images/ambientes/suites/suite-home-office-full.webp" alt="Suíte da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="suites" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/ambientes/suites/suite-10-thumb.jpg" data-full="images/ambientes/suites/suite-10.jpg" alt="Suíte da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/ambientes/suites/suite-10-thumb.webp" type="image/webp" />
+                <img src="images/ambientes/suites/suite-10-thumb.jpg" data-full="images/ambientes/suites/suite-10-full.webp" alt="Suíte da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="suites" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/ambientes/suites/suite-05-thumb.jpg" data-full="images/ambientes/suites/suite-05.jpg" alt="Suíte da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/ambientes/suites/suite-05-thumb.webp" type="image/webp" />
+                <img src="images/ambientes/suites/suite-05-thumb.jpg" data-full="images/ambientes/suites/suite-05-full.webp" alt="Suíte da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="closet" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/ambientes/closet/closet-planejado-01-thumb.jpg" data-full="images/ambientes/closet/closet-planejado-01.jpg" alt="Closet planejado da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/ambientes/closet/closet-planejado-01-thumb.webp" type="image/webp" />
+                <img src="images/ambientes/closet/closet-planejado-01-thumb.jpg" data-full="images/ambientes/closet/closet-planejado-01-full.webp" alt="Closet planejado da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="closet" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/ambientes/closet/closet-planejado-02-thumb.jpg" data-full="images/ambientes/closet/closet-planejado-02.jpg" alt="Closet planejado da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/ambientes/closet/closet-planejado-02-thumb.webp" type="image/webp" />
+                <img src="images/ambientes/closet/closet-planejado-02-thumb.jpg" data-full="images/ambientes/closet/closet-planejado-02-full.webp" alt="Closet planejado da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="closet" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/ambientes/closet/closet-masculino-thumb.jpg" data-full="images/ambientes/closet/closet-masculino.jpg" alt="Closet planejado da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/ambientes/closet/closet-masculino-thumb.webp" type="image/webp" />
+                <img src="images/ambientes/closet/closet-masculino-thumb.jpg" data-full="images/ambientes/closet/closet-masculino-full.webp" alt="Closet planejado da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="closet" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/ambientes/closet/closet-bolsas-thumb.jpg" data-full="images/ambientes/closet/closet-bolsas.jpg" alt="Closet planejado da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/ambientes/closet/closet-bolsas-thumb.webp" type="image/webp" />
+                <img src="images/ambientes/closet/closet-bolsas-thumb.jpg" data-full="images/ambientes/closet/closet-bolsas-full.webp" alt="Closet planejado da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="banheiros" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/ambientes/banheiros/banheiro-banheira-thumb.jpg" data-full="images/ambientes/banheiros/banheiro-banheira.jpg" alt="Banheiro da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/ambientes/banheiros/banheiro-banheira-thumb.webp" type="image/webp" />
+                <img src="images/ambientes/banheiros/banheiro-banheira-thumb.jpg" data-full="images/ambientes/banheiros/banheiro-banheira-full.webp" alt="Banheiro da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="banheiros" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/ambientes/banheiros/banheiro-suite-thumb.jpg" data-full="images/ambientes/banheiros/banheiro-suite.jpg" alt="Banheiro da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/ambientes/banheiros/banheiro-suite-thumb.webp" type="image/webp" />
+                <img src="images/ambientes/banheiros/banheiro-suite-thumb.jpg" data-full="images/ambientes/banheiros/banheiro-suite-full.webp" alt="Banheiro da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="banheiros" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/ambientes/banheiros/banheiro-bancada-dupla-thumb.jpg" data-full="images/ambientes/banheiros/banheiro-bancada-dupla.jpg" alt="Banheiro da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/ambientes/banheiros/banheiro-bancada-dupla-thumb.webp" type="image/webp" />
+                <img src="images/ambientes/banheiros/banheiro-bancada-dupla-thumb.jpg" data-full="images/ambientes/banheiros/banheiro-bancada-dupla-full.webp" alt="Banheiro da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="banheiros" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/ambientes/banheiros/lavabo-01-thumb.jpg" data-full="images/ambientes/banheiros/lavabo-01.jpg" alt="Banheiro da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/ambientes/banheiros/lavabo-01-thumb.webp" type="image/webp" />
+                <img src="images/ambientes/banheiros/lavabo-01-thumb.jpg" data-full="images/ambientes/banheiros/lavabo-01-full.webp" alt="Banheiro da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="home-theater" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/ambientes/home-theater/home-theater-01-thumb.jpg" data-full="images/ambientes/home-theater/home-theater-01.jpg" alt="Home theater da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/ambientes/home-theater/home-theater-01-thumb.webp" type="image/webp" />
+                <img src="images/ambientes/home-theater/home-theater-01-thumb.jpg" data-full="images/ambientes/home-theater/home-theater-01-full.webp" alt="Home theater da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="home-theater" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/ambientes/home-theater/home-theater-02-thumb.jpg" data-full="images/ambientes/home-theater/home-theater-02.jpg" alt="Home theater da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/ambientes/home-theater/home-theater-02-thumb.webp" type="image/webp" />
+                <img src="images/ambientes/home-theater/home-theater-02-thumb.jpg" data-full="images/ambientes/home-theater/home-theater-02-full.webp" alt="Home theater da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="home-theater" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/ambientes/home-theater/home-theater-03-thumb.jpg" data-full="images/ambientes/home-theater/home-theater-03.jpg" alt="Home theater da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/ambientes/home-theater/home-theater-03-thumb.webp" type="image/webp" />
+                <img src="images/ambientes/home-theater/home-theater-03-thumb.jpg" data-full="images/ambientes/home-theater/home-theater-03-full.webp" alt="Home theater da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="home-theater" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/ambientes/home-theater/home-theater-04-thumb.jpg" data-full="images/ambientes/home-theater/home-theater-04.jpg" alt="Home theater da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/ambientes/home-theater/home-theater-04-thumb.webp" type="image/webp" />
+                <img src="images/ambientes/home-theater/home-theater-04-thumb.jpg" data-full="images/ambientes/home-theater/home-theater-04-full.webp" alt="Home theater da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="lavanderia" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/ambientes/lavanderia/lavanderia-01-thumb.jpg" data-full="images/ambientes/lavanderia/lavanderia-01.jpg" alt="Lavanderia da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/ambientes/lavanderia/lavanderia-01-thumb.webp" type="image/webp" />
+                <img src="images/ambientes/lavanderia/lavanderia-01-thumb.jpg" data-full="images/ambientes/lavanderia/lavanderia-01-full.webp" alt="Lavanderia da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
             <button type="button" class="galeria__item reveal" data-categoria="lavanderia" data-lightbox-trigger data-lightbox-group="galeria">
-              <img src="images/ambientes/lavanderia/lavanderia-02-thumb.jpg" data-full="images/ambientes/lavanderia/lavanderia-02.jpg" alt="Lavanderia da Casa Betel" loading="lazy" decoding="async" />
+              <picture>
+                <source srcset="images/ambientes/lavanderia/lavanderia-02-thumb.webp" type="image/webp" />
+                <img src="images/ambientes/lavanderia/lavanderia-02-thumb.jpg" data-full="images/ambientes/lavanderia/lavanderia-02-full.webp" alt="Lavanderia da Casa Betel" loading="lazy" decoding="async" />
+              </picture>
             </button>
           </div>
         </div>
@@ -415,12 +580,15 @@
               data-lightbox-trigger
               data-lightbox-group="ficha"
             >
-              <img
-                src="images/ficha-tecnica/quadro-de-areas.png"
-                alt="Quadro de áreas do projeto arquitetônico da Casa Betel"
-                loading="lazy"
-                decoding="async"
-              />
+              <picture>
+                <source srcset="images/ficha-tecnica/quadro-de-areas.webp" type="image/webp" />
+                <img
+                  src="images/ficha-tecnica/quadro-de-areas.png"
+                  alt="Quadro de áreas do projeto arquitetônico da Casa Betel"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
             </button>
             <button
               type="button"
@@ -428,12 +596,15 @@
               data-lightbox-trigger
               data-lightbox-group="ficha"
             >
-              <img
-                src="images/ficha-tecnica/planta-de-situacao.png"
-                alt="Planta de situação do lote 460, Rua L12, Condomínio Reserva da Pedra"
-                loading="lazy"
-                decoding="async"
-              />
+              <picture>
+                <source srcset="images/ficha-tecnica/planta-de-situacao.webp" type="image/webp" />
+                <img
+                  src="images/ficha-tecnica/planta-de-situacao.png"
+                  alt="Planta de situação do lote 460, Rua L12, Condomínio Reserva da Pedra"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
             </button>
             <button
               type="button"
@@ -441,12 +612,15 @@
               data-lightbox-trigger
               data-lightbox-group="ficha"
             >
-              <img
-                src="images/ficha-tecnica/projeto-arquitetonico.png"
-                alt="Identificação do projeto arquitetônico: obra, endereço e responsável técnico"
-                loading="lazy"
-                decoding="async"
-              />
+              <picture>
+                <source srcset="images/ficha-tecnica/projeto-arquitetonico.webp" type="image/webp" />
+                <img
+                  src="images/ficha-tecnica/projeto-arquitetonico.png"
+                  alt="Identificação do projeto arquitetônico: obra, endereço e responsável técnico"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
             </button>
           </div>
           <p class="ficha-tecnica__credito">
@@ -456,15 +630,22 @@
       </section>
 
       <section class="tour" id="tour">
-        <img
-          class="tour__image"
-          src="images/fachada/piscina-area-gourmet-2000.jpg"
-          srcset="images/fachada/piscina-area-gourmet-2000.jpg 2000w, images/fachada/piscina-area-gourmet.jpg 4000w"
-          sizes="100vw"
-          alt="Piscina e área gourmet da Casa Betel ao entardecer"
-          loading="lazy"
-          decoding="async"
-        />
+        <picture>
+          <source
+            type="image/webp"
+            srcset="images/fachada/piscina-area-gourmet-2000.webp 2000w, images/fachada/piscina-area-gourmet-full.webp 4000w"
+            sizes="100vw"
+          />
+          <img
+            class="tour__image"
+            src="images/fachada/piscina-area-gourmet-2000.jpg"
+            srcset="images/fachada/piscina-area-gourmet-2000.jpg 2000w, images/fachada/piscina-area-gourmet.jpg 4000w"
+            sizes="100vw"
+            alt="Piscina e área gourmet da Casa Betel ao entardecer"
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
         <div class="tour__overlay"></div>
         <div class="tour__content container reveal">
           <p class="section-eyebrow">Tour Virtual</p>

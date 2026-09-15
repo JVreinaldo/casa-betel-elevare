@@ -180,6 +180,12 @@
   box-shadow: var(--shadow-lg);
 }
 
+.galeria__item picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .galeria__item img {
   width: 100%;
   height: 100%;
@@ -270,6 +276,12 @@
 
 .ficha-tecnica__plate:hover {
   box-shadow: var(--shadow-md);
+}
+
+.ficha-tecnica__plate picture {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .ficha-tecnica__plate img {

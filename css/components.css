@@ -132,6 +132,12 @@
   aspect-ratio: 16 / 10;
 }
 
+.ambiente-card__media picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .ambiente-card__media img {
   width: 100%;
   height: 100%;
