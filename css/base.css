@@ -3,6 +3,12 @@ html {
   scroll-padding-top: 88px;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   background-color: var(--color-bg);
   color: var(--color-ink);
@@ -49,7 +55,7 @@ section h2 {
 .reveal {
   opacity: 0;
   transform: translateY(16px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: opacity 0.5s var(--transition-smooth), transform 0.5s var(--transition-smooth);
 }
 
 .reveal.is-visible {
