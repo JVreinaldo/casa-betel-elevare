@@ -65,7 +65,7 @@ function initLightbox(filtrosApi) {
     const trigger = itensGrupo[indiceAtual];
     if (!trigger) return;
     const img = getImg(trigger);
-    imagem.src = img.src;
+    imagem.src = img.dataset.full || img.src;
     imagem.alt = img.alt;
     const multiplo = itensGrupo.length > 1;
     prevBtn.hidden = !multiplo;
