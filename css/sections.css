@@ -221,11 +221,6 @@
   margin-block-end: var(--space-lg);
 }
 
-.ficha-tecnica__intro em {
-  color: var(--color-text-muted);
-  font-size: 0.85rem;
-}
-
 .ficha-tecnica__stats {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
