@@ -1,5 +1,6 @@
 /* Componentes reutilizáveis (botões, cards, menu...) — preenchido a partir da Etapa 2 */
 
+/* Esconde visualmente mas mantém acessível para leitores de tela */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -196,6 +197,7 @@
   background-color: rgba(20, 18, 16, 0.92);
 }
 
+/* atributo hidden controlado pelo gallery.js ao abrir/fechar */
 .lightbox[hidden] {
   display: none;
 }
@@ -315,6 +317,7 @@
   transition: transform var(--transition-base), opacity var(--transition-base);
 }
 
+/* as 3 barrinhas do hambúrguer giram e viram um "X" quando o menu abre */
 .nav-toggle--active .nav-toggle__bar:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
