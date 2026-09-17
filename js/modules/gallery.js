@@ -1,8 +1,11 @@
+// Junta os dois comportamentos da galeria: os filtros por ambiente e o lightbox
 export function initGallery() {
   const filtrosApi = initFilters();
   initLightbox(filtrosApi);
 }
 
+// Controla os botões de filtro (Fachada, Cozinha, Sala...) e esconde
+// as fotos que não pertencem à categoria escolhida
 function initFilters() {
   const filtros = document.querySelectorAll("[data-filtro]");
   const itens = document.querySelectorAll("[data-galeria-grid] .galeria__item");
@@ -22,12 +25,15 @@ function initFilters() {
     botao.addEventListener("click", () => aplicarFiltro(botao.dataset.filtro));
   });
 
+  // ao carregar a página, aplica o filtro que já vier marcado como ativo no HTML
   const ativo = document.querySelector("[data-filtro].is-active") || filtros[0];
   aplicarFiltro(ativo.dataset.filtro);
 
+  // devolve aplicarFiltro pra quem chamou poder reaproveitar (o lightbox usa isso ao fechar)
   return { aplicarFiltro };
 }
 
+// Controla a visualização em tela cheia das fotos (galeria e ficha técnica)
 function initLightbox(filtrosApi) {
   const lightbox = document.querySelector("[data-lightbox]");
   const imagem = document.querySelector("[data-lightbox-image]");
@@ -37,6 +43,8 @@ function initLightbox(filtrosApi) {
 
   if (!lightbox || !imagem) return;
 
+  // itensGrupo guarda todas as fotos do mesmo "grupo" (ex: toda a galeria),
+  // em ordem, pra dar pra navegar com os botões de próxima/anterior
   let itensGrupo = [];
   let indiceAtual = 0;
 
@@ -53,6 +61,7 @@ function initLightbox(filtrosApi) {
     document.body.classList.add("no-scroll");
   };
 
+  // ao fechar, deixa a galeria filtrada na categoria da última foto vista
   const fechar = () => {
     lightbox.hidden = true;
     document.body.classList.remove("no-scroll");
@@ -65,6 +74,8 @@ function initLightbox(filtrosApi) {
     const trigger = itensGrupo[indiceAtual];
     if (!trigger) return;
     const img = getImg(trigger);
+    // usa a versão em alta resolução (data-full) quando existe;
+    // a miniatura da grade é só pra deixar o carregamento da página mais leve
     imagem.src = img.dataset.full || img.src;
     imagem.alt = img.alt;
     const multiplo = itensGrupo.length > 1;
@@ -72,6 +83,7 @@ function initLightbox(filtrosApi) {
     nextBtn.hidden = !multiplo;
   };
 
+  // navega circularmente: da última foto volta pra primeira, e vice-versa
   const irPara = (delta) => {
     indiceAtual = (indiceAtual + delta + itensGrupo.length) % itensGrupo.length;
     mostrarImagemAtual();
@@ -85,6 +97,7 @@ function initLightbox(filtrosApi) {
   prevBtn?.addEventListener("click", () => irPara(-1));
   nextBtn?.addEventListener("click", () => irPara(1));
 
+  // setas do teclado e Esc também funcionam, sem precisar clicar nos botões
   document.addEventListener("keydown", (event) => {
     if (lightbox.hidden) return;
     if (event.key === "Escape") fechar();
@@ -92,12 +105,14 @@ function initLightbox(filtrosApi) {
     if (event.key === "ArrowRight") irPara(1);
   });
 
+  // clicar fora da foto (no fundo escuro) fecha o lightbox
   lightbox.addEventListener("click", (event) => {
     if (event.target === lightbox) fechar();
   });
 
+  // suporte a arrastar o dedo (swipe) no celular pra trocar de foto
   let toqueInicialX = null;
-  const LIMIAR_ARRASTO = 40;
+  const LIMIAR_ARRASTO = 40; // em pixels — evita disparar com um toque acidental
 
   lightbox.addEventListener(
     "touchstart",
