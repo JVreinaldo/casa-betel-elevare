@@ -17,6 +17,7 @@
   object-fit: cover;
 }
 
+/* degradê escuro sobre a foto, pra garantir contraste do texto branco */
 .hero__overlay {
   position: absolute;
   inset: 0;
@@ -210,6 +211,7 @@
   opacity: 1;
 }
 
+/* itens fora do filtro ativo — controlado pelo gallery.js */
 .galeria__item[hidden] {
   display: none;
 }
@@ -296,6 +298,8 @@
   color: var(--color-text-muted);
 }
 
+/* no desktop as 3 pranchas ficam lado a lado: quadro e título empilhados
+   à esquerda, planta de situação ocupando as duas linhas à direita */
 @media (min-width: 860px) {
   .ficha-tecnica__plates {
     grid-template-columns: 1.2fr 1fr;
