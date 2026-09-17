@@ -1,14 +1,17 @@
+/* Rolagem suave ao clicar em links do menu (âncoras internas) */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 88px;
+  scroll-padding-top: 88px; /* compensa a altura do header fixo */
 }
 
+/* Quem prefere menos movimento na tela não recebe a rolagem animada */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
 }
 
+/* Fundo e tipografia base de toda a página */
 body {
   background-color: var(--color-bg);
   color: var(--color-ink);
@@ -16,10 +19,12 @@ body {
   font-size: 1rem;
 }
 
+/* Trava a rolagem do body quando o menu mobile ou o lightbox estão abertos */
 body.no-scroll {
   overflow: hidden;
 }
 
+/* Todos os títulos usam a fonte serifada do projeto */
 h1,
 h2,
 h3,
@@ -28,6 +33,7 @@ h4 {
   color: var(--color-ink);
 }
 
+/* Largura máxima do conteúdo, centralizada, com respiro nas laterais */
 .container {
   width: 100%;
   max-width: var(--content-width);
@@ -35,6 +41,7 @@ h4 {
   padding-inline: var(--space-md);
 }
 
+/* Texto pequeno em caixa alta, acima do título de cada seção (ex: "GALERIA") */
 .section-eyebrow {
   font-size: 0.8rem;
   font-weight: 600;
@@ -44,6 +51,7 @@ h4 {
   margin-block-end: var(--space-xs);
 }
 
+/* Tamanho do título de cada seção — cresce com a tela via clamp() */
 section h2 {
   font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 500;
